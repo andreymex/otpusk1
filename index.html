@@ -1,0 +1,221 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Очерёдность записи на отпуск</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#f4f5f8;--cd:#fff;--tx:#1b2130;--mu:#6b7385;--ln:#e2e5ec;--ac:#2f5fd0;--on:#2f5fd0;--ont:#fff;--hd:#eef2fb;--wr:#fff3c4;--ok:#e4f6e8;--mk:#3a9d4f}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#13161c;--cd:#1c2029;--tx:#e8eaf0;--mu:#98a1b3;--ln:#2d3341;--ac:#86a8f7;--on:#4e7be6;--hd:#232a3a;--wr:#4a4020;--ok:#1f3a2a;--mk:#2e7d32}}
+:root[data-theme="dark"]{--bg:#13161c;--cd:#1c2029;--tx:#e8eaf0;--mu:#98a1b3;--ln:#2d3341;--ac:#86a8f7;--on:#4e7be6;--hd:#232a3a;--wr:#4a4020;--ok:#1f3a2a;--mk:#2e7d32}
+html,body{margin:0}html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 56px)}
+body{background:var(--bg);color:var(--tx);font:15px/1.35 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-text-size-adjust:100%}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--cd);border-bottom:1px solid var(--ln);padding:8px 12px}
+h1{font-size:16px;margin:0 0 6px}nav{display:flex;gap:6px}
+nav button{flex:1;padding:9px 4px;border:1px solid var(--ln);background:var(--bg);color:var(--tx);border-radius:9px;font:inherit;font-size:14px}
+nav button.a{background:var(--on);color:#fff;border-color:var(--on)}
+main{max-width:980px;margin:0 auto;padding:12px 10px 40px}
+.card{background:var(--cd);border:1px solid var(--ln);border-radius:12px;margin-bottom:14px;overflow:hidden}
+.card>h2{font-size:15px;margin:0;padding:10px 12px;border-bottom:1px solid var(--ln);display:flex;justify-content:space-between;align-items:center;gap:8px}
+.bar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.btn{padding:10px 14px;border:1px solid var(--ln);border-radius:9px;background:var(--cd);color:var(--tx);font:inherit;font-size:14px;cursor:pointer}
+.btn.p{background:var(--on);color:#fff;border-color:var(--on)}.btn.d{color:#c0392b}
+table{width:100%;border-collapse:collapse}th,td{padding:9px 6px;text-align:center;border-bottom:1px solid var(--ln);font-size:14px}
+th{background:var(--hd);color:var(--mu);font-size:11px;text-transform:uppercase}td.f{text-align:left;padding-left:10px}td.f a{color:var(--tx);text-decoration:none}
+tr:last-child td{border-bottom:0}td.q{font-weight:700;color:var(--ac)}tr.dup td.q{background:var(--wr)}tr.ok{background:var(--ok)}
+input[type=checkbox]{width:22px;height:22px;accent-color:var(--on)}
+select,input[type=text],input[type=number]{font:inherit;font-size:16px;padding:9px;border:1px solid var(--ln);border-radius:9px;background:var(--cd);color:var(--tx);min-width:0}
+.sel{display:flex;gap:6px;padding:10px}.sel select{flex:1}
+.mos{display:grid;grid-template-columns:repeat(auto-fill,minmax(124px,1fr));gap:8px;padding:10px}
+.mo{border:1px solid var(--ln);border-radius:9px;padding:5px}.mo b{display:block;font-size:12px;color:var(--mu);text-align:center;margin-bottom:3px}
+.wk{display:grid;grid-template-columns:repeat(4,1fr);gap:3px}
+.wk button{min-height:40px;border:1px solid var(--ln);border-radius:7px;background:var(--bg);color:var(--mu);font-size:10px;padding:0}
+.wk button.on{background:var(--mk);color:#fff;border-color:var(--mk);font-weight:700}
+.sum{display:flex;gap:16px;flex-wrap:wrap;padding:10px 12px;color:var(--mu)}.sum b{color:var(--tx)}
+.ws{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:6px;padding:8px}
+.ws div{display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
+.ws input{padding:4px 1px;font-size:9px;text-align:center;width:100%;box-sizing:border-box;min-width:0}
+.ws input:disabled{opacity:.55;cursor:not-allowed;background:var(--bg)}
+.ws span{grid-column:1/-1;font-size:10px;color:var(--mu);text-align:center}
+.sc{overflow-x:auto;-webkit-overflow-scrolling:touch}.sc table{width:auto;min-width:100%}.sc th,.sc td{padding:3px 2px;min-width:26px;font-size:11px}
+.sc td.n{position:sticky;left:0;background:var(--cd);min-width:132px;z-index:1}.sc td.n select{width:130px;font-size:13px;padding:5px}
+.sc td.c{cursor:pointer;border-left:1px solid var(--ln)}.sc td.c.on{background:var(--mk)}
+.mt{border-left:2px solid var(--mu)}
+.rm{color:#c0392b;padding:4px 7px;font-size:11px;border:1px solid var(--ln);border-radius:6px;background:var(--cd);cursor:pointer;margin-left:4px}
+tr.tot td{font-weight:700;background:var(--hd)}td.over{color:#c0392b;font-weight:700}
+#flt{flex:1;min-width:140px}
+.arn{font-size:11px;color:var(--mu);margin-left:6px}
+.prio{font-size:10px;background:#ffca28;color:#4e342e;padding:1px 6px;border-radius:4px;font-weight:700;margin-left:6px;vertical-align:middle;white-space:nowrap}
+#thm{padding:6px 10px;font-size:15px;line-height:1;min-width:40px}
+#tz{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:#222;color:#fff;padding:10px 16px;border-radius:10px;opacity:0;transition:.3s;pointer-events:none;z-index:20}
+#md{position:fixed;inset:0;background:#0008;display:none;align-items:center;justify-content:center;z-index:15;padding:20px}#md div{background:var(--cd);border-radius:14px;padding:18px;max-width:340px;width:100%}#md p{margin:0 0 14px}#md .bar{margin:0;justify-content:flex-end}
+.pn{display:none}.pn.a{display:block}h3.pt{display:none}
+@page{size:A4 portrait;margin:6mm}
+@media print{
+  header,.bar,#tz,#md,.no{display:none!important}
+  .pn{display:none!important}
+  #q{display:block!important}
+  body{background:#fff;color:#000;font:8px/1.15 system-ui,Arial,sans-serif}
+  main{max-width:none;padding:0;margin:0}
+  h1,h3.pt{display:block;text-align:center;font-size:11px;margin:0 0 3px;font-weight:700}
+  .card{border:1px solid #999;border-radius:0;margin:0 0 3px;break-inside:avoid;page-break-inside:avoid}
+  .card>h2{font-size:9px;padding:1px 4px;border-bottom:1px solid #999;background:#eee;color:#000}
+  table{font-size:8px}
+  th,td{border-color:#999;padding:1px 3px;font-size:8px;line-height:1.1}
+  th{font-size:7px;padding:1px 2px}
+  td.f a{color:#000;text-decoration:none}
+  input[type=checkbox]{width:9px;height:9px}
+  tr.dup td.q{background:#fff}
+  tr.ok{background:#eee}
+  .prio{font-size:7px;padding:0 2px;background:none;color:#000;border:1px solid #000;border-radius:2px}
+}
+</style></head><body>
+<header>
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><h1 style="margin:0">Таблица очерёдности записи на отпуск</h1><button id="thm" class="btn" title="Тема">🌙</button></div>
+  <nav id="nv" style="margin-top:6px"><button data-t="d">Данные</button><button data-t="q">Очередь</button><button data-t="s">График</button></nav>
+</header>
+<main><section class="pn" id="q"></section><section class="pn" id="d"></section><section class="pn" id="s"></section></main>
+<div id="tz"></div><div id="md"><div><p id="mp"></p><div class="bar"><button class="btn" id="mn">Нет</button><button class="btn p" id="my">Да</button></div></div></div>
+<script>
+const D={"people":[
+{"g":"Маш.","n":1,"name":"Кузин Егор Николаевич"},
+{"g":"Маш.","n":2,"name":"Зыбин Александр Сергеевич"},
+{"g":"Маш.","n":3,"name":"Жаров Антон Владимирович"},
+{"g":"Маш.","n":4,"name":"Ткачев Роман Викторович"},
+{"g":"Маш.","n":5,"name":"Андреев Сергей Андреевич"},
+{"g":"Маш.","n":6,"name":"Журавлев Александр Валентинович"},
+{"g":"Маш.","n":7,"name":"Королев Михаил Александрович"},
+{"g":"Маш.","n":8,"name":"Егорков Никита Сергеевич"},
+{"g":"Маш.","n":9,"name":"Иванов Андрей Евгеньевич"},
+{"g":"Маш.","n":10,"name":"Мальцев Сергей Николаевич"},
+{"g":"Маш.","n":11,"name":"Кириллов Никита"},
+{"g":"Маш.","n":12,"name":"-"},
+{"g":"ст.опер.","n":1,"name":"Козырев Сергей Вячеславович"},
+{"g":"ст.опер.","n":2,"name":"Шукурулаев Марат Маметкулыевич"},
+{"g":"ст.опер.","n":3,"name":"Кузнецов Анатолий Валерьевич"},
+{"g":"ст.опер.","n":4,"name":"Баранов Михаил Иванович"},
+{"g":"ст.опер.","n":5,"name":"Миронов Алексей Анатольевич"},
+{"g":"ст.опер.","n":6,"name":"-"},
+{"g":"опер.","n":1,"name":"Федосеев Денис Викторович"},
+{"g":"опер.","n":2,"name":"Егоров Алексей Владимирович"},
+{"g":"опер.","n":3,"name":"Зубец Андрей Сергеевич"},
+{"g":"опер.","n":4,"name":"Вишневский Владислав Денисович"},
+{"g":"опер.","n":5,"name":"Пупышев Роман Павлович"},
+{"g":"опер.","n":6,"name":"Аверьянов Илья Владиславович"},
+{"g":"опер.","n":7,"name":"Никифоров Игорь Сергеевич"},
+{"g":"опер.","n":8,"name":"Кюрчубаш Александр Андреевич"},
+{"g":"опер.","n":9,"name":"Плахута Михаил Сергеевич"},
+{"g":"опер.","n":10,"name":"Шимеев Борис Георгиевич"},
+{"g":"опер.","n":11,"name":"Иванов Илья Викторович"},
+{"g":"опер.","n":12,"name":"Милотов Сергей Владимирович"},
+{"g":"опер.","n":13,"name":"Чаркин Дмитрий Алексеевич"},
+{"g":"опер.","n":14,"name":"Лавров Владислав Олегович"},
+{"g":"опер.","n":15,"name":"Гошкин Денис Владимирович"},
+{"g":"опер.","n":16,"name":"Веселков Сергей Владимирович"},
+{"g":"опер.","n":17,"name":"Обрубов Михаил Михайлович"},
+{"g":"опер.","n":18,"name":"Макаров Евгений Алексеевич"},
+{"g":"опер.","n":19,"name":"Руденко Артемий Александрович"},
+{"g":"опер.","n":20,"name":"Копачков Михаил Анатольевич"},
+{"g":"опер.","n":21,"name":"Гайнулин Николай Раисович"},
+{"g":"опер.","n":22,"name":"Никитин Станислав Николаевич"},
+{"g":"опер.","n":23,"name":"Марков Кирилл Вячеславович"},
+{"g":"опер.","n":24,"name":"Плахута Сергей Михайлович"},
+{"g":"опер.","n":25,"name":"Фомин Сергей Никалаевич"},
+{"g":"опер.","n":26,"name":"Виноградов Алексей Алексеевич"},
+{"g":"опер.","n":27,"name":"-"}
+],"weights":[2,1.96,1.92,1.88,1.83,1.79,1.75,1.71,1.66,1.62,1.58,1.54,1.5,1.46,1.42,1.38,1.33,1.29,1.25,1.21,1.16,1.12,1.08,1.04,1,1.05,1.1,1.15,1.2,1.25,1.3,1.35,1.4,1.15,1.5,1.55,1.6,1.65,1.7,1.75,1.8,1.84,1.88,1.92,1.95,1.96,1.975,1.98],"order":{"Маш.":[10,1,0,4,3,2,5,8,6,7,9,11],"ст.опер.":[12,13,14,15,16,17],"опер.":[18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44]}};
+const MN=['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],GN={'Маш.':'Машинисты','ст.опер.':'Старшие операторы','опер.':'Операторы'},GS=['Маш.','ст.опер.','опер.'],SG=[['опер.','Операторы',5],['ст.опер.','Старшие по смене',2],['Маш.','Машинисты',2]];
+const CY=new Date().getFullYear();
+const THKEY='otpusk_theme';
+const $=s=>document.querySelector(s),KEY='otpusk_v1';let S;
+const clone=o=>JSON.parse(JSON.stringify(o));
+let theme=localStorage.getItem(THKEY)||'auto';
+function applyTheme(){const r=document.documentElement;if(theme==='dark')r.setAttribute('data-theme','dark');else if(theme==='light')r.setAttribute('data-theme','light');else r.removeAttribute('data-theme');const b=document.getElementById('thm');if(b)b.textContent=theme==='dark'?'🌙':theme==='light'?'☀️':'🌓'}
+function cycleTheme(){theme=theme==='auto'?'dark':theme==='dark'?'light':'auto';localStorage.setItem(THKEY,theme);applyTheme();toast('Тема: '+({auto:'авто',dark:'тёмная',light:'светлая'})[theme])}
+applyTheme();
+function init(){
+  const emptyMarks=D.people.map(()=>[Array(48).fill(null),Array(48).fill(null),Array(48).fill(null)]);
+  return{extra:[],marks:emptyMarks,names:D.people.map(p=>p.name),w:D.weights.slice(),order:clone(D.order),chk:{},arch:{},prio:{},lockW:true,sel:D.order['Маш.'][0],tab:'d',years:[CY-2,CY-1,CY],sc:Object.fromEntries(SG.map(g=>[g[0],Array.from({length:g[2]},()=>({p:'',w:Array(48).fill(0)}))]))}
+}
+function load(){try{const v=localStorage.getItem(KEY);return v?JSON.parse(v):null}catch(e){return null}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+S=load()||init();
+if(!S.extra)S.extra=[];if(!S.arch)S.arch={};if(!S.chk)S.chk={};if(!S.prio)S.prio={};
+if(S.lockW===undefined)S.lockW=true;
+if(!S.years||S.years.length!==3)S.years=[CY-2,CY-1,CY];
+let PPL;function buildPPL(){PPL=D.people.concat(S.extra)}
+buildPPL();
+const has=x=>x!=null&&x!=='';
+function addPerson(g){const cnt=PPL.filter(p=>p.g===g).length;S.extra.push({g,n:cnt+1,name:''});buildPPL();S.marks.push([Array(48).fill(null),Array(48).fill(null),Array(48).fill(null)]);S.names.push('');const idx=PPL.length-1;S.order[g].push(idx);S.sel=idx;S.tab='d';save();render();toast('Сотрудник добавлен')}
+function delPerson(i){
+  const p=PPL[i];
+  if(i<D.people.length){toast('Базовых сотрудников можно только архивировать');return}
+  ask('Удалить сотрудника «'+(S.names[i]||'—')+'»? Данные будут потеряны безвозвратно.',()=>{
+    const extraIdx=i-D.people.length;
+    S.extra.splice(extraIdx,1);
+    S.marks.splice(i,1);
+    S.names.splice(i,1);
+    GS.forEach(g=>{S.order[g]=S.order[g].filter(k=>k!==i).map(k=>k>i?k-1:k)});
+    const shift=(obj)=>{const n={};Object.keys(obj).forEach(k=>{const x=+k;if(x<i)n[x]=obj[k];else if(x>i)n[x-1]=obj[k]});return n};
+    S.arch=shift(S.arch);S.chk=shift(S.chk);S.prio=shift(S.prio);
+    Object.keys(S.sc).forEach(g=>{S.sc[g].forEach(r=>{if(r.p==='')return;const n=+r.p;if(n===i)r.p='';else if(n>i)r.p=n-1})});
+    buildPPL();
+    const g=p.g;
+    S.sel=S.order[g].length?S.order[g][0]:(PPL.length?0:null);
+    save();render();toast('Сотрудник удалён');
+  });
+}
+function setArch(i,v){S.arch[i]=v;save();render();toast(v?'Сотрудник перенесён в архив':'Сотрудник восстановлен')}
+function exportData(){try{const blob=new Blob([JSON.stringify(S)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='otpusk_backup_'+new Date().toISOString().slice(0,10)+'.json';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),1000);toast('Резервная копия сохранена')}catch(e){toast('Не удалось сохранить файл')}}
+function importData(file){const r=new FileReader();r.onload=()=>{try{const v=JSON.parse(r.result);if(!v||!v.marks||!v.order)throw 0;ask('Импортировать данные? Текущие данные в этом браузере будут заменены.',()=>{S=v;if(!S.extra)S.extra=[];if(!S.arch)S.arch={};if(!S.chk)S.chk={};if(!S.prio)S.prio={};if(S.lockW===undefined)S.lockW=true;if(!S.years||S.years.length!==3)S.years=[CY-2,CY-1,CY];buildPPL();S.tab='d';save();render();toast('Данные импортированы')})}catch(e){toast('Ошибка: файл повреждён или не подходит')}};r.readAsText(file)}
+function yr(i,y){const m=S.marks[i][y];let s=0,c=0;m.forEach((x,k)=>{if(has(x)){s+=x*S.w[k];c++}});return c?s/c:null}
+function avg(i){const a=[0,1,2].map(y=>yr(i,y)).filter(x=>x!=null);return a.length?a.reduce((s,x)=>s+x,0)/a.length:null}
+const f3=x=>x==null?'НЕТ':(+x.toFixed(3)).toString(),fy=x=>x==null?'Нет Данных':(+x.toFixed(3)).toString();
+function ranks(g){const ids=PPL.map((p,i)=>i).filter(i=>PPL[i].g===g&&!S.arch[i]),av={};ids.forEach(i=>av[i]=avg(i));const ds=[...new Set(ids.filter(i=>av[i]!=null).map(i=>av[i].toFixed(9)))].map(Number),r={};ids.forEach(i=>r[i]=av[i]==null?null:ds.filter(v=>v>=av[i]-1e-9).length);return r}
+function autoSort(){GS.forEach(g=>{const r=ranks(g);S.order[g]=S.order[g].map((i,k)=>[i,k]).sort((a,b)=>{const pa=S.prio[a[0]]?0:1,pb=S.prio[b[0]]?0:1;if(pa!==pb)return pa-pb;const x=r[a[0]],y=r[b[0]];return (x==null?1e9:x)-(y==null?1e9:y)||a[1]-b[1]}).map(a=>a[0])})}
+function toast(t){const e=$('#tz');e.textContent=t;e.style.opacity=1;setTimeout(()=>e.style.opacity=0,1800)}
+function ask(t,cb){$('#mp').textContent=t;$('#md').style.display='flex';$('#my').onclick=()=>{$('#md').style.display='none';cb()};$('#mn').onclick=()=>$('#md').style.display='none'}
+function clearYear(y){ask('Вы уверены, что хотите очистить данные за этот год?',()=>{S.marks.forEach(m=>m[y]=Array(48).fill(null));save();render();toast('Данные успешно очищены!')})}
+function rq(){let h='<div class="bar"><input type="text" id="flt" class="no" placeholder="Поиск по Ф.И.О...."><button class="btn" onclick="print()">Печать</button><button class="btn no" id="ex">Экспорт</button><button class="btn no" id="im">Импорт</button><input type="file" id="imf" class="no" accept="application/json" style="display:none"><button class="btn d" id="br">Сбросить всё</button></div><h3 class="pt">Таблица очерёдности записи на отпуск</h3>';
+GS.forEach(g=>{const r=ranks(g),cnt={};Object.values(r).forEach(v=>v!=null&&(cnt[v]=(cnt[v]||0)+1));
+h+=`<div class="card"><h2>${GN[g]}</h2><table><tr><th>Ф.И.О.</th><th>Ср. коэф.</th><th>Очередь</th><th>Запись</th></tr>`;
+S.order[g].forEach((i)=>{if(S.arch[i])return;const v=r[i],a=avg(i);h+=`<tr data-nm="${(S.names[i]||'').toLowerCase()}" class="${S.chk[i]?'ok':''}${v!=null&&cnt[v]>1?' dup':''}"><td class="f"><a href="#" data-p="${i}">${S.names[i]||'—'}</a>${S.prio[i]?'<span class="prio">Льгота</span>':''}</td><td>${f3(a)}</td><td class="q">${v==null?'Нет Данных':v}</td><td><input type="checkbox" data-c="${i}" ${S.chk[i]?'checked':''}></td></tr>`});h+='</table></div>'});
+$('#q').innerHTML=h;$('#br').onclick=()=>ask('Сбросить все данные к исходным из файла? Добавленные сотрудники и архив тоже будут удалены.',()=>{S=init();buildPPL();save();render();toast('Сброшено')});
+$('#ex').onclick=exportData;$('#im').onclick=()=>$('#imf').click();$('#imf').onchange=e=>{if(e.target.files[0])importData(e.target.files[0]);e.target.value=''};
+$('#q').querySelectorAll('[data-c]').forEach(e=>e.onchange=()=>{S.chk[e.dataset.c]=e.checked;save();e.closest('tr').classList.toggle('ok',e.checked)});
+$('#q').querySelectorAll('[data-p]').forEach(e=>e.onclick=ev=>{ev.preventDefault();S.sel=+e.dataset.p;S.tab='d';render()});
+$('#flt').oninput=e=>{const v=e.target.value.trim().toLowerCase();$('#q').querySelectorAll('tr[data-nm]').forEach(tr=>tr.style.display=(!v||tr.dataset.nm.includes(v))?'':'none')}}
+function rd(){const i=S.sel,all=PPL.map((p,k)=>k);
+const isExtra=i>=D.people.length;
+let h='<div class="card"><div class="sel"><button class="btn" id="pv">‹</button><select id="ps">'+GS.map(g=>`<optgroup label="${GN[g]}">`+S.order[g].concat(all.filter(k=>PPL[k].g===g&&!S.order[g].includes(k))).map(k=>`<option value="${k}" ${k==i?'selected':''}>${S.names[k]||'—'}${S.arch[k]?' (архив)':''}</option>`).join('')+'</optgroup>').join('')+`</select><button class="btn" id="nx">›</button></div><div class="sel" style="padding-top:0"><input type="text" id="nm" style="flex:1" value="${(S.names[i]||'').replace(/"/g,'&quot;')}" placeholder="Ф.И.О."><button class="btn d" id="arch">${S.arch[i]?'Восстановить':'В архив'}</button>${isExtra?'<button class="btn d" id="del">Удалить</button>':''}</div><div class="sel" style="padding-top:0"><select id="ng">${GS.map(g=>`<option value="${g}">${GN[g]}</option>`).join('')}</select><button class="btn p" id="ap">+ Новый сотрудник</button></div>`;
+const r=ranks(PPL[i].g)[i];h+=`<div class="sum"><span>Должн.: <b>${PPL[i].g}</b></span><span>Ср. коэф.: <b>${f3(avg(i))}</b></span><span>Очередь: <b>${r==null?'Нет Данных':r}</b></span>${S.arch[i]?'<span class="arn">В архиве — скрыт из очереди и графика</span>':''}${isExtra?'<span class="arn">Добавлен вручную — можно удалить</span>':''}</div>`;
+h+=`<div class="sel" style="padding-top:0"><label style="display:flex;align-items:center;gap:10px;flex:1;cursor:pointer;font-size:14px"><input type="checkbox" id="prio" ${S.prio[i]?'checked':''}><span>Льгота — приоритет в очереди для записи</span></label></div></div>`;
+h+='<div class="card"><h2>Годы учёта (последние 3 года)</h2><div class="sel" style="padding-top:0">'+S.years.map((y,k)=>`<input type="number" inputmode="numeric" data-yr="${k}" value="${y}" style="flex:1;text-align:center">`).join('')+'</div></div>';
+S.years.forEach((y,yi)=>{h+=`<div class="card"><h2><span>${y} · год. коэф.: ${fy(yr(i,yi))}</span><button class="btn d" data-y="${yi}">Очистить ${y}</button></h2><div class="mos">`;
+for(let m=0;m<12;m++){h+=`<div class="mo"><b>${MN[m]}</b><div class="wk">`;for(let k=0;k<4;k++){const c=m*4+k,v=S.marks[i][yi][c];h+=`<button class="${has(v)?'on':''}" data-y="${yi}" data-k="${c}">${has(v)?v:S.w[c]}</button>`}h+='</div></div>'}h+='</div></div>'});
+h+=`<div class="card"><h2><span>Коэффициенты по неделям (кф/год)</span><span style="display:flex;gap:6px"><button class="btn" id="resetW" style="font-size:12px;padding:6px 10px">↺ Сброс</button><button class="btn ${S.lockW?'p':''}" id="lockW" style="font-size:12px;padding:6px 10px">${S.lockW?'🔒 Заблокировано':'🔓 Разблокировать'}</button></span></h2><div class="ws">`;
+for(let m=0;m<12;m++){h+=`<div><span>${MN[m]}</span>`;for(let k=0;k<4;k++)h+=`<input type="number" step="0.01" inputmode="decimal" data-w="${m*4+k}" value="${S.w[m*4+k]}" ${S.lockW?'disabled':''}>`;h+='</div>'}
+h+='</div></div>';
+$('#d').innerHTML=h;const go=d=>{const g=PPL[i].g,l=S.order[g];let k=l.indexOf(i),j=k;do{j=(j+d+l.length)%l.length}while(S.arch[l[j]]&&j!==k);S.sel=l[j];render()};
+$('#pv').onclick=()=>go(-1);$('#nx').onclick=()=>go(1);$('#ps').onchange=e=>{S.sel=+e.target.value;render()};$('#nm').onchange=e=>{S.names[i]=e.target.value.trim();save()};
+$('#arch').onclick=()=>{if(S.arch[i])setArch(i,false);else ask('Перевести сотрудника в архив? Он будет скрыт из очереди и графика, данные сохранятся.',()=>setArch(i,true))};
+$('#ap').onclick=()=>addPerson($('#ng').value);
+if(isExtra){const db=$('#del');if(db)db.onclick=()=>delPerson(i)}
+$('#prio').onchange=e=>{S.prio[i]=e.target.checked;save();render();toast(e.target.checked?'Приоритет установлен':'Приоритет снят')};
+$('#lockW').onclick=()=>{S.lockW=!S.lockW;save();render();toast(S.lockW?'Редактирование коэффициентов заблокировано':'Редактирование коэффициентов разблокировано')};
+$('#resetW').onclick=()=>ask('Сбросить коэффициенты к исходным значениям из файла?',()=>{S.w=D.weights.slice();save();render();toast('Коэффициенты сброшены к исходным')});
+$('#d').querySelectorAll('.wk button').forEach(b=>b.onclick=()=>{const m=S.marks[i][+b.dataset.y],c=+b.dataset.k;m[c]=has(m[c])?null:1;save();render()});
+$('#d').querySelectorAll('h2 [data-y]').forEach(b=>b.onclick=()=>clearYear(+b.dataset.y));
+$('#d').querySelectorAll('[data-yr]').forEach(e=>e.onchange=()=>{const v=parseInt(e.value,10);if(v>1900&&v<2200){S.years[+e.dataset.yr]=v;save();render()}else{e.value=S.years[+e.dataset.yr]}});
+$('#d').querySelectorAll('[data-w]').forEach(e=>e.onchange=()=>{const v=parseFloat(String(e.value).replace(',','.'));if(!isNaN(v)){S.w[+e.dataset.w]=v;save();render()}})}
+function rs(){let h='<div class="card"><h2>Отпуска персонала СК-2 на '+S.years[S.years.length-1]+' год (предварительно)</h2></div>';
+SG.forEach(([g,t,cap])=>{h+=`<div class="card"><h2>${t}<button class="btn" data-a="${g}">+ строка</button></h2><div class="sc"><table><tr><th rowspan="2">Сотрудник</th>`+MN.map(m=>`<th colspan="4" class="mt">${m}</th>`).join('')+'</tr><tr>'+Array.from({length:48},(_,c)=>`<th class="${c%4?'':'mt'}">${c%4+1}</th>`).join('')+'</tr>';
+const totals=Array(48).fill(0);
+S.sc[g].forEach((row,ri)=>{row.w.forEach((x,c)=>{if(x)totals[c]++});h+=`<tr><td class="n"><select data-g="${g}" data-r="${ri}"><option value="">—</option>`+PPL.map((p,k)=>p.g===g&&!S.arch[k]?`<option value="${k}" ${row.p==k&&row.p!==''?'selected':''}>${S.names[k]||'—'}${S.prio[k]?' ⭐':''}</option>`:'').join('')+`</select><button class="rm no" data-rm-g="${g}" data-rm-r="${ri}">✕</button></td>`+row.w.map((x,c)=>`<td class="c${x?' on':''}${c%4?'':' mt'}" data-g="${g}" data-r="${ri}" data-c="${c}"></td>`).join('')+'</tr>'});
+h+=`<tr class="tot"><td class="n">Итого (лимит ${cap})</td>`+totals.map((v,c)=>`<td class="${c%4?'':'mt'}${v>cap?' over':''}">${v||''}</td>`).join('')+'</tr>';
+h+='</table></div></div>'});
+$('#s').innerHTML=h;
+$('#s').querySelectorAll('td.c').forEach(e=>e.onclick=()=>{const r=S.sc[e.dataset.g][+e.dataset.r];r.w[+e.dataset.c]=r.w[+e.dataset.c]?0:1;e.classList.toggle('on');save();render()});
+$('#s').querySelectorAll('select').forEach(e=>e.onchange=()=>{S.sc[e.dataset.g][+e.dataset.r].p=e.value;save()});
+$('#s').querySelectorAll('[data-a]').forEach(b=>b.onclick=()=>{S.sc[b.dataset.a].push({p:'',w:Array(48).fill(0)});save();render()});
+$('#s').querySelectorAll('[data-rm-g]').forEach(b=>b.onclick=()=>ask('Удалить эту строку из графика?',()=>{S.sc[b.dataset.rmG].splice(+b.dataset.rmR,1);save();render()}))}
+function render(){autoSort();document.querySelectorAll('.pn').forEach(e=>e.classList.toggle('a',e.id===S.tab));document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('a',b.dataset.t===S.tab));({q:rq,d:rd,s:rs})[S.tab]();save()}
+document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{S.tab=b.dataset.t;render();scrollTo(0,0)});
+document.getElementById('thm').onclick=cycleTheme;
+render();
+</script></body></html>
